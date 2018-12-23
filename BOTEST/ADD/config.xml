@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CauHinhBoTest>
+  <kieuCham>3</kieuCham>
+  <timeLimit>1200</timeLimit>
+  <tuKhoaCam>system</tuKhoaCam>
+  <memoryLimit>1024</memoryLimit>
+</CauHinhBoTest>

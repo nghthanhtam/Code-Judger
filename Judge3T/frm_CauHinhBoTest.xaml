@@ -1,0 +1,188 @@
+﻿<Window
+    x:Class="Judge3T.frm_CauHinhBoTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Judge3T"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Judge3T - Cấu hình bộ test"
+    Width="355"
+    Height="470"
+    KeyDown="Window_KeyDown"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <StackPanel>
+
+        <Grid
+            x:Name="Grid_ThanhTrangThaiTren"
+            Width="355"
+            Height="50"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+
+        <StackPanel
+            Width="355"
+            Height="420"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#FFECEBEB">
+
+            <StackPanel
+                Width="200"
+                Height="30"
+                Margin="10,5"
+                HorizontalAlignment="Left"
+                Orientation="Horizontal">
+                <materialDesign:PackIcon
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Kind="Settings" />
+                <TextBlock
+                    Width="150"
+                    Margin="5,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Text="Cấu hình bài tập" />
+            </StackPanel>
+
+            <StackPanel
+                Width="350"
+                Height="105"
+                HorizontalAlignment="Left">
+                <StackPanel
+                    Width="310"
+                    Height="40"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        VerticalAlignment="Center"
+                        Content="Chọn bài: "
+                        FontSize="14"
+                        FontWeight="Bold" />
+                    <ComboBox
+                        x:Name="cbb_ChonBaiTap"
+                        Width="200"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White"
+                        BorderBrush="#FF1ABC9C"
+                        Foreground="Black"
+                        SelectionChanged="cbb_ChonBaiTap_SelectionChanged" />
+
+
+
+                </StackPanel>
+
+
+
+                <StackPanel
+                    Width="200"
+                    Height="60"
+                    Margin="40,5,0,0"
+                    HorizontalAlignment="Left">
+
+                    <RadioButton x:Name="rb_DangBaiOI" Content="Dạng bài OI" />
+                    <RadioButton x:Name="rb_DangBaiACM" Content="Dạng bài ACM" />
+                    <RadioButton x:Name="rb_DangBaiChallenge" Content="Dạng bài Challenge" />
+
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+
+
+            <Grid Height="275" Margin="0,0,0.2,0">
+                <StackPanel Margin="0" Orientation="Vertical">
+                    <TextBlock
+                        Margin="25,10"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="Từ khóa cần cấm" />
+                    <TextBox
+                        x:Name="txt_tuKhoaCam"
+                        Width="250"
+                        Height="90"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        Background="White"
+                        TextWrapping="Wrap" />
+
+                    <TextBlock
+                        Margin="50,5"
+                        HorizontalAlignment="Right"
+                        FontStyle="Italic"
+                        Text="(Lưu ý: mỗi dòng một từ khóa)" />
+
+                    <StackPanel Margin="25,0" Orientation="Horizontal">
+                        <TextBlock
+                            Width="120"
+                            VerticalAlignment="Center"
+                            FontSize="14"
+                            Text="Giới hạn thời gian:" />
+                        <TextBox
+                            x:Name="txt_timeLimit"
+                            Width="60"
+                            Margin="10,5"
+                            HorizontalContentAlignment="Center"
+                            Background="White"
+                            Style="{StaticResource MaterialDesignTextBox}" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="14"
+                            Text="milliseconds" />
+                    </StackPanel>
+
+                    <StackPanel Margin="25,0" Orientation="Horizontal">
+                        <TextBlock
+                            Width="120"
+                            VerticalAlignment="Center"
+                            FontSize="14"
+                            Text="Giới hạn Memory:" />
+                        <TextBox
+                            x:Name="txt_MemoryLimit"
+                            Width="60"
+                            Margin="10,5"
+                            HorizontalContentAlignment="Center"
+                            Background="White"
+                            Style="{StaticResource MaterialDesignTextBox}" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="14"
+                            Text="MB" />
+                    </StackPanel>
+
+                </StackPanel>
+
+
+
+
+
+                <Button
+                    x:Name="btn_SaveDangBai"
+                    Width="70"
+                    Height="25"
+                    Margin="20,15"
+                    Padding="0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Background="#FF1ABC9C"
+                    BorderBrush="{x:Null}"
+                    Click="btn_SaveDangBai_Click">
+                    <TextBlock VerticalAlignment="Center" Text="Lưu" />
+                </Button>
+
+            </Grid>
+
+
+
+        </StackPanel>
+    </StackPanel>
+</Window>

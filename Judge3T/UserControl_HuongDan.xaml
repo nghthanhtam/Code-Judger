@@ -1,0 +1,738 @@
+﻿<UserControl
+    x:Class="Judge3T.UserControl_HuongDan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Judge3T"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+    x:Name="Win"
+    Width="1220"
+    Height="660"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    Foreground="White"
+    TextElement.FontSize="13"
+    TextElement.FontWeight="Regular"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    mc:Ignorable="d">
+
+    <StackPanel>
+
+        <Grid Height="100" VerticalAlignment="Top">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Judge3T;component/Images/bg-cauhinhphanmem.png" />
+            </Grid.Background>
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="35"
+                Foreground="WhiteSmoke"
+                Text="Hướng dẫn sử dụng phần mềm" />
+        </Grid>
+        <ScrollViewer
+            Height="545"
+            Margin="15,15,0,0"
+            VerticalAlignment="Stretch"
+            VerticalScrollBarVisibility="Visible">
+            <StackPanel
+                Name="mypanel"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top">
+
+                <!--  Hướng dẫn chấm bài bằng Judje3T  -->
+                <Expander
+                    HorizontalAlignment="Stretch"
+                    Background="#FFF0F0F0"
+                    Header="Hướng dẫn chấm bài bằng Judge3T">
+                    <StackPanel
+                        Margin="24,8,24,16"
+                        Orientation="Vertical"
+                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+
+                        <!--  Bước 1 Click Bảng điểm tổng hợp  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 1: Mở ''Bảng điểm tổng hợp''">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <TextBlock
+                                    Opacity=".68"
+                                    Text="Trên thanh menu bên trái màn hình hãy bấm vào dòng ''Bảng điểm tổng hợp''"
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="400"
+                                    Height="300"
+                                    Source="/Judge3T;component/Images/1.jpg" />
+                            </StackPanel>
+                        </Expander>
+
+                        <!--  Bước 2 Chọn bộ test  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 2: Chọn bộ test">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock
+                                            Opacity=".68"
+                                            Text="Sau khi bấm 'Bảng điểm tổng hợp' trên màn hình chính sẽ xuất hiện hình như hình bên dưới. Bấm vào nút 'Chọn bộ test'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="400"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/2.jpg" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            Opacity=".68"
+                                            Text="Sau khi bấm vào nút 'Chọn bộ test' sẽ xuất hiện một khung để chọn đường dẫn tới bộ test như hình bên dưới:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="500"
+                                            Height="300"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/3.jpg" />
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel Grid.Column="0" Margin="0,20,0,0">
+                                    <TextBlock
+                                        Opacity=".68"
+                                        Text="Sau khi bấm xong nút Ok màn hình chính sẽ bổ sung thêm thông tin trên bảng điểm như sau:"
+                                        TextWrapping="Wrap" />
+                                    <Image
+                                        Width="900"
+                                        Height="600"
+                                        Margin="0,-10,0,0"
+                                        Source="/Judge3T;component/Images/1.11.jpg" />
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Expander>
+
+                        <!--  Bước 3 Chọn thí sinh  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 3: Chọn code cần chấm của thí sinh">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock
+                                            Opacity=".68"
+                                            Text="Sau khi chọn xong bộ test bấm vào nút 'Chọn thí sinh' để chọn bài làm của thí sinh muốn được chấm."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="900"
+                                            Height="400"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/4.jpg" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            Opacity=".68"
+                                            Text="Sau khi bấm vào nút 'Chọn bộ test' sẽ xuất hiện một khung để chọn folder chứa code của thí sinh như hình dưới:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="500"
+                                            Height="300"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/6.jpg" />
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel Grid.Column="0" Margin="0,20,10,0">
+                                    <TextBlock
+                                        Opacity=".68"
+                                        Text="Sau khi bấm xong nút Ok màn hình chính sẽ bổ sung thêm thông tin trên bảng điểm như sau:"
+                                        TextWrapping="Wrap" />
+                                    <Image
+                                        Width="900"
+                                        Height="600"
+                                        Margin="0,-10,0,0"
+                                        Source="/Judge3T;component/Images/2.11.jpg" />
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </Expander>
+
+
+                        <!--  Bước 4 Chọn cấu hình cho từng bài  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 4: Thiết lập cấu hình cho từng bài">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1.5*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock
+                                            Margin="0,0,0,5"
+                                            FontSize="20"
+                                            Opacity=".68"
+                                            Text="Để thiết lập cấu hình cho từng bài người dùng phải:"
+                                            TextWrapping="Wrap" />
+                                        <Expander HorizontalAlignment="Stretch" Header="Chọn kiểu chấm bài">
+                                            <StackPanel
+                                                Margin="24,8,24,16"
+                                                Orientation="Vertical"
+                                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="   - OI: tính điểm  theo số lượng test đúng của bộ test."
+                                                    TextWrapping="Wrap" />
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="   - ACM: chỉ tính điểm khi đúng tất cả các test."
+                                                    TextWrapping="Wrap" />
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="   - Challenge: giống ACM nhưng số điểm là số kí tự trong bài. Càng ít kí tự thí sinh càng được xếp hạng cao."
+                                                    TextWrapping="Wrap" />
+
+                                            </StackPanel>
+                                        </Expander>
+
+                                        <Expander HorizontalAlignment="Stretch" Header="Giới hạn từ khóa">
+                                            <StackPanel
+                                                Margin="24,8,24,16"
+                                                Orientation="Vertical"
+                                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="Chọn những từ khóa mà người ra  đề muốn cấm học sinh dùng trong bài làm (lưu ý mỗi dòng một từ)."
+                                                    TextWrapping="Wrap" />
+                                            </StackPanel>
+                                        </Expander>
+                                        <Expander HorizontalAlignment="Stretch" Header="Giới hạn thời gian thực thi">
+                                            <StackPanel
+                                                Margin="24,8,24,16"
+                                                Orientation="Vertical"
+                                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="Giới hạn thời gian thực thi cho từng bài làm (ms)."
+                                                    TextWrapping="Wrap" />
+                                            </StackPanel>
+                                        </Expander>
+                                        <Expander HorizontalAlignment="Stretch" Header="Giới hạn Memory cho phép">
+                                            <StackPanel
+                                                Margin="24,8,24,16"
+                                                Orientation="Vertical"
+                                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                                <TextBlock
+                                                    Margin="0,0,0,5"
+                                                    FontSize="17"
+                                                    Opacity=".68"
+                                                    Text="Giới hạn dung lượng RAM sử dụng cho mỗi bài (MB)."
+                                                    TextWrapping="Wrap" />
+                                            </StackPanel>
+                                        </Expander>
+                                        <TextBlock
+                                            Margin="0,0,0,5"
+                                            FontSize="20"
+                                            Opacity=".68"
+                                            Text="*Cấu hình bộ test sẽ được cài mặc định với những bài mà người dùng không cài đặt."
+                                            TextWrapping="Wrap" />
+                                    </StackPanel>
+
+                                </Grid>
+                            </StackPanel>
+                        </Expander>
+
+                        <!--  Bước 5 Chấm bài  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 5: Chấm bài">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Bấm vào nút 'Chấm bài' sau khi cài đặt cấu hình bộ test xong."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="400"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/7.jpg" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Center"
+                                            Opacity=".68"
+                                            Text="Sau khi bấm vào nút 'Chấm bài' sẽ xuất hiện vòng tròn xoay bên trong nút báo hiệu là quá trình chấm bài đang được diễn ra."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="300"
+                                            Height="200"
+                                            Margin="0,10,0,0"
+                                            Source="/Judge3T;component/Images/9.jpg" />
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Margin="0,30,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi chấm bài xong thì trên góc trên phải sẽ xuất hiện thông báo."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,20,0,0"
+                                            Source="/Judge3T;component/Images/21.jpg" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                        <TextBlock
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Bảng điểm sẽ được cập nhật đầy đủ sau khi chấm bài xong."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="400"
+                                            Margin="0,20,0,0"
+                                            Source="/Judge3T;component/Images/11.jpg" />
+                                    </StackPanel>
+
+                                </Grid>
+
+                            </StackPanel>
+                        </Expander>
+
+                        <!--  Bước 6 Xuất PDF  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 6: Xuất bảng điểm">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                    <TextBlock
+                                        HorizontalAlignment="Left"
+                                        Opacity=".68"
+                                        Text="Bấm vào nút 'Xuất file PDF' sau khi chấm bài xong."
+                                        TextWrapping="Wrap" />
+                                    <Image
+                                        Width="1000"
+                                        Height="600"
+                                        Margin="0,10,0,0"
+                                        Source="/Judge3T;component/Images/211.jpg" />
+                                    <TextBlock
+                                        HorizontalAlignment="Left"
+                                        Opacity=".68"
+                                        Text="Sau khi bấm vào nút 'Xuất file PDF' sẽ xuất hiện một khung để chọn tên và nơi lưu file PDF. Sau khi chọn xong bấm Ok để hoàn thành thao tác."
+                                        TextWrapping="Wrap" />
+                                    <Image
+                                        Width="700"
+                                        Height="500"
+                                        Margin="0,10,0,0"
+                                        Source="/Judge3T;component/Images/32.jpg" />
+                                    <TextBlock
+                                        Margin="0,20,0,0"
+                                        HorizontalAlignment="Left"
+                                        Opacity=".68"
+                                        Text="Sau khi bấm xong nút Ok chương trình sẽ tự động mở file PDF."
+                                        TextWrapping="Wrap" />
+                                    <Image
+                                        Width="1000"
+                                        Height="600"
+                                        Margin="0,-10,0,0"
+                                        Source="/Judge3T;component/Images/pdf.jpg" />
+                                </StackPanel>
+
+
+                            </StackPanel>
+                        </Expander>
+
+
+
+                    </StackPanel>
+                </Expander>
+
+                <!--  Hướng dẫn dùng tool chuyển đổi  -->
+                <Expander
+                    HorizontalAlignment="Stretch"
+                    Background="#FFF0F0F0"
+                    Header="Hướng dẫn sử dụng bộ chuyển đổi cấu trúc bộ test">
+                    <StackPanel
+                        Margin="24,8,24,16"
+                        Orientation="Vertical"
+                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+
+                        <!--  Bước 1 Chọn Bộ test muốn chuyển đôi  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 1: Chọn 'Bộ test muốn chuyển đổi'">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Bấm vào nút có hình dạng folder để chọn bộ test muốn chuyển đổi."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/he.jpg" />
+
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Sau đó chọn đường dẫn tới bộ test muốn chuyển đổi rồi bấm Ok."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="500"
+                                    Height="300"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/mntrai.jpg" />
+                            </StackPanel>
+                        </Expander>
+                        <!--  Bước 2 Chọn Nơi lưu sau khi chuyển đổi  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Bước 2: Chọn nơi lưu file sau khi chuyển đổi xong">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Bấm vào nút có hinh dạng giống hình bên dưới để chọn nơi lưu file sau khi chuyển đổi xong."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/hehe.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Sau đó sẽ xuât hiện khung để chọn nơi lưu."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/pts.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Sau đó bấm nút 'Chuyển đổi' để hoàn thành thao tác chuyển đổi cấu trúc bộ test."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/chuyen doi.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Sẽ xuất hiện 1 thông báo sau khi hoàn thành chuyển đổi cấu trúc bộ test và chương trình sẽ mở thư mục chứa file."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="300"
+                                    Height="100"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/thonbao.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Cấu trúc bộ test trước khi chuyển đôi:"
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/be4.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Cấu trúc bộ test sau khi chuyển đổi xong:"
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="400"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/after.jpg" />
+
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+
+
+                </Expander>
+                <!--  Hướng dẫn thao tác trên bảng điểm sau khi chấm bài xong  -->
+                <Expander
+                    HorizontalAlignment="Stretch"
+                    Background="#FFF0F0F0"
+                    Header="Hướng dẫn thao tác trên bảng điểm sau khi chấm bài xong">
+                    <StackPanel
+                        Margin="24,8,24,16"
+                        Orientation="Vertical"
+                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+
+                        <!--  Xóa  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Xóa">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                               
+                                <!--Xóa nguyên bảng điểm-->
+                                <Expander HorizontalAlignment="Stretch" Header="Xóa nguyên bảng điểm">
+                                    <StackPanel
+                                        Margin="24,8,24,16"
+                                        Orientation="Vertical"
+                                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Để xóa nguyên bảng điểm người dùng hãy nhấp chuột phải vào ngoài bảng điểm và bấm nút 'Xóa'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="500"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/hiehie.jpg" />
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi xóa bài thành công sẽ xuất hiện thông báo sau:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/xoathanhcong.jpg" />
+                                    </StackPanel>
+                                </Expander>
+
+                                <!--Xóa một bài của thí sinh-->
+                                <Expander HorizontalAlignment="Stretch" Header="Xóa một bài của thí sinh">
+                                    <StackPanel
+                                        Margin="24,8,24,16"
+                                        Orientation="Vertical"
+                                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Để xóa một bài của thí sinh người dùng hãy nhấp chuột phải vào ô bài người dùng muốn xóa và bấm nút 'Xóa'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="500"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/11.jpg" />
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi xóa bài thành công sẽ xuất hiện thông báo sau:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/xoathanhcong.jpg" />
+                                    </StackPanel>
+                                </Expander>
+                                <!--Xóa thí sinh khỏi bảng điểm-->
+                                <Expander HorizontalAlignment="Stretch" Header="Xóa thí sinh khỏi danh sách chấm bài">
+                                    <StackPanel
+                                        Margin="24,8,24,16"
+                                        Orientation="Vertical"
+                                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Để xóa thí sinh khỏi danh sách người dùng hãy nhấp chuột phải vào một trong những ô sau (STT,Họ và tên và Tông điểm) của thí sinh mà người dùng muốn xóa và bấm nút 'Xóa'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="500"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/46.jpg" />
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi xóa thí sinh thành công sẽ xuất hiện thông báo sau:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/xoathanhcong.jpg" />
+                                    </StackPanel>
+                                </Expander>
+
+
+                            </StackPanel>
+                        </Expander>
+                        <!--  Chấm lại  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Chấm lại">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <Expander HorizontalAlignment="Stretch" Header="Chấm lại môt bài của thí sinh">
+                                    <StackPanel
+                                        Margin="24,8,24,16"
+                                        Orientation="Vertical"
+                                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Để chấm lại một bài của thí sinh người dùng hãy nhấp chuột phải vào bài người dùng muốn chấm lại và bấm nút 'Chấm lại'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="500"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/11.jpg" />
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi chấm lại bài xong sẽ xuất hiện thông báo sau"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/chamlai.jpg" />
+                                    </StackPanel>
+                                </Expander>
+
+                                <Expander HorizontalAlignment="Stretch" Header="Chấm lại tất cả bài của một thí sinh">
+                                    <StackPanel
+                                        Margin="24,8,24,16"
+                                        Orientation="Vertical"
+                                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Để chấm lại tất cả bài thi của một thí sinh người dùng hãy nhấp chuột phải vào một trong những ô sau (STT,Họ và tên và Tông điểm) của thí sinh mà người dùng muốn chấm lại và bấm nút 'Chấm lại'."
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="800"
+                                            Height="500"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/46.jpg" />
+                                        <TextBlock
+                                            Margin="0,0,0,20"
+                                            HorizontalAlignment="Left"
+                                            Opacity=".68"
+                                            Text="Sau khi chấm lại tất cả bài xong sẽ xuất hiện thông báo sau:"
+                                            TextWrapping="Wrap" />
+                                        <Image
+                                            Width="400"
+                                            Height="200"
+                                            Margin="0,0,0,20"
+                                            Source="/Judge3T;component/Images/chamlai.jpg" />
+                                    </StackPanel>
+                                </Expander>
+
+
+                            </StackPanel>
+                        </Expander>
+
+                        <!--  Chi tiết bài chấm  -->
+                        <Expander HorizontalAlignment="Stretch" Header="Chi tiết bài chấm">
+                            <StackPanel
+                                Margin="24,8,24,16"
+                                Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Để xem chi tiết của một bài chấm người dùng hãy nhấp chuột phải vào bài người dùng muốn xem và chọn bấm nút 'Chi tiết bài chấm'."
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="500"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/11.jpg" />
+                                <TextBlock
+                                    Margin="0,0,0,20"
+                                    HorizontalAlignment="Left"
+                                    Opacity=".68"
+                                    Text="Sau đó sẽ xuất hiện khung với chi tiết bài làm như sau:"
+                                    TextWrapping="Wrap" />
+                                <Image
+                                    Width="800"
+                                    Height="500"
+                                    Margin="0,0,0,20"
+                                    Source="/Judge3T;component/Images/chi tiet.jpg" />
+
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+
+
+                </Expander>
+
+
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+    </StackPanel>
+
+</UserControl>
